@@ -18,6 +18,21 @@ Some queries live in `.sql` files, and some are written into the application cod
 
 Only primary keys are indexed.
 
+## The report
+
+The sales team runs the "Top customers" report, which is built on `queries/top_customers.sql`:
+
+```bash
+python3 scripts/make_db.py   # build the database
+python3 report.py            # print the report (the query takes about 5 seconds)
+```
+
+To check a change to the query, compare the report with the original one. The original report was saved once, before any changes, in `expected/top_customers_report.txt`:
+
+```bash
+python3 compare_report.py    # PASS if the report is identical, FAIL with the differences if not
+```
+
 ## Build, check, benchmark
 
 ```bash
@@ -37,7 +52,7 @@ To optimise one target, point the Script at it:
 | Phase | Command |
 |---|---|
 | Build | `python3 scripts/make_db.py` |
-| Test | `python3 check.py --target sql:top_customers` |
+| Test | `python3 compare_report.py` (or `python3 check.py --target sql:top_customers`) |
 | Benchmark | `python3 bench.py --target sql:top_customers` |
 
 For a query in the code, use `code:customer_summary` in the test and benchmark commands instead. Metrics: `query_ms` (lower is better) and `db_size_mb` (lower is better).

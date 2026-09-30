@@ -1,0 +1,23 @@
+Top EU customers (signed up since July 2024) by 2025 spend
+
+  #  Customer         Orders    Spend 2025
+  1  Customer 18274        4     11,556.95
+  2  Customer 1982         5     10,749.52
+  3  Customer 10983        5     10,492.14
+  4  Customer 2813         5     10,054.85
+  5  Customer 5209         5     10,044.12
+  6  Customer 15381        4      9,748.86
+  7  Customer 19647        6      9,604.59
+  8  Customer 17757        3      9,560.27
+  9  Customer 12589        5      9,430.54
+ 10  Customer 5327         3      9,072.82
+ 11  Customer 15032        5      8,864.26
+ 12  Customer 16840        5      8,658.39
+ 13  Customer 5098         6      8,549.82
+ 14  Customer 6246         4      8,478.89
+ 15  Customer 4288         4      8,399.55
+ 16  Customer 9693         4      8,391.32
+ 17  Customer 5897         4      8,382.32
+ 18  Customer 10895        4      8,379.86
+ 19  Customer 7322         3      8,358.62
+ 20  Customer 6438         4      8,346.30
