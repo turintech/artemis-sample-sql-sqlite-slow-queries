@@ -31,8 +31,8 @@ CREATE TABLE order_items (
 
 CREATE INDEX idx_orders_customer_status_date
     ON orders(customer_id, status, order_date);
-CREATE INDEX idx_order_items_order_spend
-    ON order_items(order_id, quantity, unit_price);
+CREATE INDEX idx_order_items_order
+    ON order_items(order_id);
 
 CREATE TABLE reviews (
     id          INTEGER PRIMARY KEY,
