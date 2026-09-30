@@ -1,0 +1,4 @@
+data/
+artemis_results.csv
+artemis_results.json
+__pycache__/
