@@ -29,7 +29,7 @@ The default target, and the one the sales team's "Top customers" report runs on,
 
 `check.py` runs a target and compares a SHA-256 fingerprint of its rows, in order and with floats rounded to cents, with the fingerprint recorded from the original query in `expected/`. A change that makes a query faster but alters its result fails. `bench.py` runs the same check before timing and exits with an error if it fails, so a wrong query never gets a time. `python3 check.py --all` checks all five targets.
 
-For the "Top customers" report, `compare_report.py` renders the report from the current query and compares it line by line with `expected/top_customers_report.txt`, the report saved once from the original query.
+For the "Top customers" report, `compare_report.py` renders the report from the current query and compares it line by line with `expected/top_customers_report.txt`, the report saved once from the original query. The report doesn't show every column (the customer id, for one), so once it matches, `compare_report.py` also checks the query's rows against the same fingerprint `bench.py` uses; a change the report can't see fails here rather than in the benchmark.
 
 There are no unit tests and no held-out set. The check is that the result is identical.
 
@@ -52,7 +52,7 @@ python3 check.py --all                            # PASS or FAIL for every targe
 python3 check.py --target sql:top_customers       # one target
 python3 bench.py --target sql:top_customers       # time it, write artemis_results.csv
 python3 report.py                                 # print the "Top customers" report
-python3 compare_report.py                         # PASS if the report is identical to the original
+python3 compare_report.py                         # PASS if the report and the query's rows match the original
 ```
 
 ## Commands for Artemis
